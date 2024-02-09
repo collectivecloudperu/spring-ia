@@ -42,8 +42,8 @@ public class SpringIaApplication {
 	@GetMapping("/ia")
 	public Map generate(
 
-			// Le hacemos una pregunta a la Inteligencia Artificial
-			@RequestParam(value = "message", defaultValue = "¿Donde queda Mali?") String message) {
+		// Le hacemos una pregunta a la Inteligencia Artificial
+		@RequestParam(value = "message", defaultValue = "¿Donde queda Mali?") String message) {
 
 		// Obtenemos la respuesta de la Inteligencia Artificial
 		return Map.of("generation", chatClient.call(message));
